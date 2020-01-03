@@ -8,6 +8,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 
 
 
@@ -21,7 +22,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    MatGridListModule
+    MatGridListModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   exports: [
     MatToolbarModule,
@@ -30,7 +33,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    MatGridListModule
+    MatGridListModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class MaterialModule { }

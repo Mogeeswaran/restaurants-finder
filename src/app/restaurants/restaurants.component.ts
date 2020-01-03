@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RestaurantsService } from './restaurants.service';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-restaurants',
@@ -7,19 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class RestaurantsComponent implements OnInit {
-
-
-  constructor() { 
-    
-      let value = 'Clear me';
-    
+  name:any;
+  restaurantsForm: FormGroup
+  constructor(private restaurantsService: RestaurantsService) {     
   }
 
   ngOnInit() {
     document.body.classList.add('bg-img');
+    this.restaurantsForm = new FormGroup({
+      name: new FormControl('',Validators.required)
+    });
+
   }
 
   onSearch(){
+    console.log(this.restaurantsForm.value);
+    this.restaurantsService.getRestaurantsByName(this.restaurantsForm.value);
     
   }
 

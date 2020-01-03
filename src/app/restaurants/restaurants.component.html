@@ -1,11 +1,12 @@
 <mat-toolbar color="primary" class="toolbar">
     <mat-toolbar-row>
         <span>Restaurants</span>
-        <form class="form-design" (ngSubmit)="onSearch()">
+        <form class="form-design" [formGroup]="restaurantsForm">
             <mat-form-field class="form-field">
-                <input matInput placeholder="Enter restaurant name" type="text">
+                <input matInput formControlName="name" placeholder="Enter restaurant Name" required>
+                <!-- <input matInput placeholder="Enter restaurant name" type="text"> -->
             </mat-form-field>
-            <button mat-button class="alignbtn" type="submit">
+            <button mat-button class="alignbtn" (click)="onSearch()">
                 <mat-icon>search</mat-icon>Search
             </button>
         </form>
