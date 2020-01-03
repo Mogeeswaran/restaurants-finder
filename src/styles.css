@@ -2,3 +2,22 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.container{
+    background-color: #fafafa;
+  }
+  
+  .action-item-spacer{
+    flex: 1 1 auto;
+  }
+
+  .mat-toolbar-header{
+      position: relative;
+  }
+
+.bg-img
+{
+    background-image: url(./app/photo-1514933651103-005eec06c04b.jpeg);
+    background-position: center;
+    background-repeat: no-repeat; 
+}

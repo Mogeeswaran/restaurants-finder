@@ -1,0 +1,29 @@
+<mat-toolbar color="primary" class="toolbar">
+    <mat-toolbar-row>
+        <span>Restaurants</span>
+        <form class="form-design" (ngSubmit)="onSearch()">
+            <mat-form-field class="form-field">
+                <input matInput placeholder="Enter restaurant name" type="text">
+            </mat-form-field>
+            <button mat-button class="alignbtn" type="submit">
+                <mat-icon>search</mat-icon>Search
+            </button>
+        </form>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="container">
+    <mat-grid-list cols="1" rowHeight="3:1">
+        <mat-grid-tile>
+            <mat-card class="mat-card">
+                <mat-card-header>
+                <mat-card-title>data</mat-card-title>
+                <mat-card-subtitle>data</mat-card-subtitle>
+                <!-- <mat-card-actions>
+                    <a mat-button routerLink="/contacts/{{contact.contactId}}">VIEW DETAILS</a>
+                </mat-card-actions> -->
+                </mat-card-header>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
