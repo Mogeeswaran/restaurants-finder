@@ -1,0 +1,51 @@
+<div class="container">
+    <mat-grid-list cols="1" rowHeight="4:1">
+        <mat-grid-tile>
+            <form class="contact-form" [formGroup]="employeeForm">
+                <span *ngIf="isSaved">
+                    <p>Saved Successfully</p>
+                </span>
+                <mat-form-field class="contact-fields-full-width">
+                    <input matInput class = "form-control" formControlName="name" placeholder="Enter Name" required>
+                    <!-- <input matInput placeholder="Enter Name" required> -->
+                    <mat-error>
+                        Name is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="contact-fields-full-width">
+                    <input matInput type="email" formControlName="email" placeholder="Enter E-Mail" required>
+                    <!-- <input matInput type="email" placeholder="Enter E-Mail" required> -->
+                    <mat-error>Email is <strong>required</strong></mat-error>
+                </mat-form-field>
+                <mat-form-field class="contact-fields-full-width">
+                    <input matInput formControlName="phone" placeholder="Enter Phone" required>
+                    <!-- <input matInput placeholder="Enter Phone" required> -->
+                    <mat-error>
+                        Phone Number is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+                <button mat-raised-button color="accent" (click)="onCreateEmployee()">Create Contact</button>
+            </form>
+           
+        </mat-grid-tile>       
+    </mat-grid-list>
+</div>
+<div>
+    <button mat-raised-button color="accent" (click)="onGetEmployee()">Get Employee Details</button>
+
+    <div class="container">
+        <mat-grid-list cols="3" rowHeight="3:1">
+            <mat-grid-tile *ngFor="let employee of employeeList">
+                <mat-card class="mat-card">
+                    <mat-card-header>
+                    <mat-card-title>{{employee.name}}</mat-card-title>
+                    <mat-card-subtitle>{{employee.email}}</mat-card-subtitle>
+                    <!-- <mat-card-actions>
+                        <a mat-button routerLink="/contacts/{{contact.contactId}}">VIEW DETAILS</a>
+                    </mat-card-actions> -->
+                    </mat-card-header>
+                </mat-card>
+            </mat-grid-tile>
+        </mat-grid-list>    
+    </div>
+</div>

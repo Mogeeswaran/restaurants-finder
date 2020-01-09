@@ -9,13 +9,15 @@ import { MaterialModule} from './shared/modules/material/material.module';
 import { HomeComponent } from './home/home.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { EmployeesComponent } from './employees/employees.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    RestaurantsComponent
+    RestaurantsComponent,
+    EmployeesComponent
   ],
   imports: [
     BrowserModule,
