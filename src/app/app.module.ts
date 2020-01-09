@@ -11,6 +11,9 @@ import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { EmployeesComponent } from './employees/employees.component';
 import { LoginComponent } from './login/login.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SignupComponent } from './signup/signup.component';
+import { MymodalComponent } from './mymodal/mymodal.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +22,20 @@ import { LoginComponent } from './login/login.component';
     HomeComponent,
     RestaurantsComponent,
     EmployeesComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent,
+    MymodalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
+  ],
+  entryComponents: [
+    MymodalComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
