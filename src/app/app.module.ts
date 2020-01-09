@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { EmployeesComponent } from './employees/employees.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { EmployeesComponent } from './employees/employees.component';
     HeaderComponent,
     HomeComponent,
     RestaurantsComponent,
-    EmployeesComponent
+    EmployeesComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
